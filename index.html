@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Start your project here-->
+
+    <canvas id="myChart"></canvas>
+
+<script>
+
+function test() {
+
+var data = [
+  {
+      value: 300,
+      color:"#F7464A",
+      highlight: "#FF5A5E",
+      label: "Red"
+  },
+  {
+      value: 50,
+      color: "#46BFBD",
+      highlight: "#5AD3D1",
+      label: "Green"
+  },
+  {
+      value: 100,
+      color: "#FDB45C",
+      highlight: "#FFC870",
+      label: "Yellow"
+  }
+]
+
+    var option = {
+    responsive: true,
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myDoughnutChart = new Chart(ctx).Doughnut(data,option); //'Line' defines type of the chart.
+};
+
+window.onload = test();
+
+</script>
+
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
